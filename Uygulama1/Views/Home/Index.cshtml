@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Uygulama1.Models.Urun>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Adet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fiyat)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Ad)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Adet)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Fiyat)
+    </td>
+    <td>
+        @Html.ActionLink("Sepete Ekle", "SepeteEkle", new { id = item.Id })
+    </td>
+    <td>
+        @Html.ActionLink("Hemen Sayın Al", "SatinAl", new { id = item.Id })
+    </td>
+</tr>
+    }
+
+</table>
+<br />
+<br />
+<h1>Sepet</h1>
+<table class="table">
+    <tr>
+        <td>
+            @ViewBag.UrunAd
+        </td>
+        <td>
+            @ViewBag.Urunfiyat
+        </td>
+        <td>
+            @Html.ActionLink("Sil", "CerezSil", "Home")
+        </td>
+        <td>
+            <a href="Home/SatinAl/@ViewBag.UrunId">Satın Al</a>
+        </td>
+    </tr>
+</table>

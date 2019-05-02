@@ -1,2 +1,9 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+Basit bir Sepet Uygulamasý
+
+1-Code First ile Veritabaný oluþturuldu
+
+2-Veritabanýndaki verileri gösterilecek index sayfasý oluþturuldu
+
+3-Link-Button týklanýldýðýnda Cookie oluþturuldu
+
+4-Index sayfasýnda cookie izlenimi,silinimi yapýldý.
